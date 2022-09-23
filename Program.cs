@@ -26,3 +26,34 @@ if (exNum == 27)
     }
     Console.WriteLine($"Сумма цифр в числе = {summ}");
 }
+else if (exNum == 29)
+{
+    Console.WriteLine("Введите размер массива");
+    int size = int.Parse(Console.ReadLine());
+
+    int[] massiveCreator(int colSize)
+    {
+        int[] collection = new int[size];
+        return collection;
+    }
+    int[] massive = massiveCreator(size);
+
+    for (int i = 0; i < size; i++)
+    {
+        try
+        {   Console.WriteLine($"Введите {i+1}-й элемент массива");
+            massive[i] = int.Parse(Console.ReadLine());
+        }
+        catch
+        {Console.WriteLine("Данные введены неверно, попробуйте еще раз");
+        i -= 1;
+        }
+    }
+    Console.Write("[");
+    for (int i = 0; i < size - 1; i++)
+    {
+        Console.Write(massive[i]);
+        Console.Write(", ");
+    }
+    Console.Write($"{massive[^1]}]");
+}
