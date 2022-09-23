@@ -1,4 +1,6 @@
-﻿int exNum = int.Parse(Console.ReadLine());
+﻿while (true)
+{Console.WriteLine("Введите номер задачи");
+int exNum = int.Parse(Console.ReadLine());
 
 if (exNum == 25)
 {   while (true)
@@ -56,4 +58,4 @@ else if (exNum == 29)
         Console.Write(", ");
     }
     Console.Write($"{massive[^1]}]");
-}
+}}
